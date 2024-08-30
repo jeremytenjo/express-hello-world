@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => res.type('html').send(html));
 
-app.get('/jokes/random', (req, res) => {
+app.get('/fortnie', (req, res) => {
   request(
     { url: 'https://www.fortnite.com/@bhe/8064-7152-2934?lang=en-US' },
     (error, response, body) => {
