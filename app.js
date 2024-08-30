@@ -9,6 +9,8 @@ const apiProxy = createProxyMiddleware({
   target: 'https://www.fortnite.com',
 });
 
+app.get('/', (req, res) => res.send('Hello World!'));
+
 app.use('/api', apiProxy);
 
 app.get('/api/fortnite', async (req, res) => {
