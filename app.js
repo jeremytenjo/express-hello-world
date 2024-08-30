@@ -9,6 +9,11 @@ const apiProxy = createProxyMiddleware({
   target: 'https://www.fortnite.com',
 });
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 app.get('/', (req, res) => res.send('Hello World!'));
 
 app.use('/api', apiProxy);
